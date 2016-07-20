@@ -1,0 +1,128 @@
+{
+/*
+	 // Place your snippets for Vue.js here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+*/
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "console"
+	},
+	"import modules": {
+		"prefix": "impm",
+		"body": [
+			"import $2 from '$1'",
+			"$3"
+		],
+		"description": "导入node_modules文件"
+	},
+	"import components": {
+		"prefix": "impc",
+		"body": [
+			"import {$1} from 'components'",
+			"$2"
+		],
+		"description": "导入components组件"
+	},
+	"import view common components": {
+		"prefix": "impvc",
+		"body": [
+			"import {$1} from 'views/common/$1'",
+			"$2"
+		],
+		"description": "导入view 下面的common组件"
+	},
+	"import vuex": {
+		"prefix": "impvx",
+		"body": [
+			"import { mapGetters, mapActions } from 'vuex'",
+			"$2"
+		],
+		"description": "导入vuex mapGetters与mapActions"
+	},
+	"create vue": {
+		"prefix": "cvue",
+		"body": [
+			"<template>",
+			"	<div class=''></div>",
+			"</template>",
+			"",
+			"<script>",
+			"",
+			"import { mapGetters, mapActions } from 'vuex'",
+			"",
+			"export default {",
+				"	name: '$1',",
+				"	data () {",
+				"		return {}",
+				"	}",
+				"	computed: {",
+					"		...mapGetters(['']),",
+				"	}",
+				"",
+				"	methods: {",
+					"		...mapActions(['']),",
+				"	},",
+				"",
+				"	components: {",
+					"",
+				"	}",
+			"}",
+			"</script>",
+			"",
+			"<style src='styles/$1'></style>"
+		],
+		"description": "创建含有templete，script，style引用"
+	},
+	"create to template": {
+		"prefix": "v-tpl",
+		"body": [
+			"<template>",
+			"	<div class='$1'></div>",
+			"</template>",
+			"$2"
+		],
+		"description": "创建templete标签"
+	},
+	"create script vuex": {
+		"prefix": "v-scr",
+		"body": [
+			"<script>",
+			"$1",
+			"import { mapGetters, mapActions } from 'vuex'",
+			"",
+			"export default {",
+				"	name: '$1',",
+				"	data () {",
+				"		return {}",
+				"	},",
+				"	computed: {",
+					"		...mapGetters(['']),",
+				"	},",
+				"",
+				"	methods: {",
+					"		...mapActions(['']),",
+				"	},",
+				"",
+				"	components: {",
+					"",
+				"	}",
+			"}",
+			"</script>",
+			"$2"
+		],
+		"description": "创建script标签，包含vuex，export"
+	},
+	"link style": {
+		"prefix": "v-sty",
+		"body": [
+			"<style src='styles/$1'></style>",
+			"$2"
+		],
+		"description": "引用style样式"
+	}
+}

@@ -1,0 +1,132 @@
+{
+/*
+	 // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+*/
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "console"
+	},
+	"import modules": {
+		"prefix": "impm",
+		"body": [
+			"import $2 from '$1'",
+			"$3"
+		],
+		"description": "导入node_modules文件"
+	},
+	"import components": {
+		"prefix": "impc",
+		"body": [
+			"import {$1} from 'components'",
+			"$2"
+		],
+		"description": "导入components组件"
+	},
+	"import view common components": {
+		"prefix": "impvc",
+		"body": [
+			"import {$1} from 'views/common/$1'",
+			"$2"
+		],
+		"description": "导入view 下面的common组件"
+	},
+	"import vuex": {
+		"prefix": "impvx",
+		"body": [
+			"import { mapGetters, mapActions } from 'vuex'",
+			"$2"
+		],
+		"description": "导入vuex mapGetters与mapActions"
+	},
+	"create modules vuex": {
+		"prefix": "cvx",
+		"body": [
+			"import request from 'utils/request'",
+			"import { PROMISE_SUCCESS } from '../constants'",
+			"",
+			"/**",
+			"* actions、mutations中用的常量",
+			"*/",
+			"const ADD_$1 = 'ADD_$1'",
+			"const DELETE_$1 = 'DELETE_$1'",
+			"const MODIFY_$1 = 'MODIFY_$1'",
+			"const GET_$1 = 'GET_$1'",
+			"",
+			"/**",
+			"* vuex的state",
+			"*/",
+			"const state = {",
+			"	result: null",
+			"}",
+			"",
+			"/**",
+			"* vuex的getters",
+			"*/",
+			"const getters = {",
+			"	result: state => state.result",
+			"}",
+			"",
+			"/**",
+			"* vuex中的actions",
+			"*/",
+			"const actions = {",
+			"	add ({ commit }, payload) {",
+			"	",
+			"	},",
+			"	del ({ commit }, payload) {",
+			"	",
+			"	},",
+			"	edit ({ commit }, payload) {",
+			"	",
+			"	},",
+			"	get ({ commit }, payload) {",
+			"	",
+			"	}",
+			"}",
+			"",
+			"/**",
+			"* vuex中的mutations",
+			"*/",
+			"const mutations = {",
+			"	[ADD_$1] (state, { payload, meta }) {",
+			"",
+			"	},",
+			"	[DELETE_$1] (state, { payload, meta }) {",
+			"",
+			"	},",
+			"	[MODIFY_$1] (state, { payload, meta }) {",
+			"",
+			"	},",
+			"	[GET_$1] (state, { payload, meta }) {",
+			"",
+			"	}",
+			"}",
+			"",
+			"export default {",
+			"	state,",
+			"	getters,",
+			"	actions,",
+			"	mutations",
+			"}"
+		],
+		"description": "生成vuex2.0 modules文件"
+	},
+	"create constants": {
+		"prefix": "cst",
+		"body": [
+			"const ADD_$1 = 'ADD_$1'",
+			"const DELETE_$1 = 'DELETE_$1'",
+			"const MODIFY_$1 = 'MODIFY_$1'",
+			"const GET_$1 = 'GET_$1'",
+			"$2"
+		],
+		"description": "新建常量，add、delete、modify、get"
+	}
+}
